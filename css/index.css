@@ -136,33 +136,32 @@ body {
 }
 body {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
-body #container {
+#container {
   width: 80%;
   border: 3px solid gold;
   padding: 2%;
 }
-nav {
+#container nav {
   display: flex;
   flex-direction: row;
   width: 100%;
   border: 3px solid red;
   justify-content: space-around;
 }
-nav a {
+#container nav a {
   padding: 1%;
   text-decoration: none;
 }
-header {
+#container header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   border: 3px solid black;
 }
-header img {
+#container header img {
   width: 50%;
   justify-content: center;
 }
