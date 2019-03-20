@@ -137,31 +137,45 @@ body {
 body {
   display: flex;
   justify-content: center;
+  padding: ;
 }
 #container {
   width: 80%;
+  height: 100%;
   border: 3px solid gold;
   padding: 2%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+#container h2 {
+  font-size: 2em;
 }
 #container nav {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  border: 3px solid red;
   justify-content: space-around;
-}
-#container nav a {
-  padding: 1%;
   text-decoration: none;
 }
 #container header {
+  margin: 20px 0 20px 0;
+}
+#container #skills {
+  margin: 20px 0 20px 0;
+}
+#container #work-history {
+  margin: 20px 0 20px 0;
+}
+#container img {
+  width: 25%;
+  border: 2px solid green;
+  display: none;
+}
+.flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  border: 3px solid black;
+  margin: 2% 0 2% 0;
 }
-#container header img {
-  width: 50%;
-  justify-content: center;
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  margin: ;
 }
