@@ -56,7 +56,7 @@ table {
 html, body {
     height: 100%;
 }
-
+//////////////////////// Variables...
 @fontSizing: 2em;
 @green: #008000;
 @silver: #C0C0C0;
@@ -94,10 +94,20 @@ nav {
 
 	border: 2px solid brown;
 	padding: 1% 0;
+///////////////////////////////////////Nested @ rules...
+	@media(max-width: 500px) {
+		.flex-column();
+		a {
+			margin: 2px auto;
+			background-color: @green;
+			width: 100%;
+			padding: 1%;
+			text-align: center;
+		}
+	}
 }
 
 a {
-	// display: flex;
 	text-decoration: none;
 	font-size: @fontSizing;
 }
@@ -107,6 +117,18 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	margin: 20px 0 20px 0;
+
+////////////////////////Nested @ rules...
+	@media(max-width: 500px) {
+		div {
+			img {
+				width: 100%;
+			}
+		}
+		#head-h1 {
+			font-size: 1.5em;
+		}
+	}
 }
 
 section	{
@@ -115,12 +137,10 @@ section	{
 	border: 2px solid silver;
 	margin: 1% 0 1% 0;
 	padding: 1%;	
-	// height: 25%;
 
 	a img {
 		width: 35%;
 		border: 5px solid @green;
-		// .flex-row():
 	}
 
 	ul {
@@ -145,11 +165,11 @@ section	{
 }
 
 #work-history {
-	.flex-column();
+	.flex-column(); /////////Mixin...
 	height: auto;
 
 	div {
-		.flex-row();
+		.flex-row(); /////////// Mixin...
 
 		border: 2px solid blue;
 		padding: 1%;
@@ -161,8 +181,7 @@ form {
 	margin-bottom: 2%;
 }
 
-
-
+//////////////////////// Mixins...
 .flex-column {
 	display: flex;
 	flex-direction: column;
@@ -177,34 +196,4 @@ form {
 .flex-center {
 	display: flex;
 	justify-content: center;
-}
-
-@media(max-width: 500px) {
-	header {
-		div {
-			img {
-				width: 100%;
-			}
-		}
-		#head-h1 {
-		font-size: 1.5em;
-	}
-
-	}
-
-	nav {
-		.flex-column();
-		a {
-			margin: 2px auto;
-			background-color: @green;
-			width: 100%;
-			padding: 1%;
-			text-align: center;
-		}
-	}
-
-	#aTags a {
-		display: flex;
-		flex-direction: column;
-	}	
 }

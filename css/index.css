@@ -157,6 +157,19 @@ nav {
   border: 2px solid brown;
   padding: 1% 0;
 }
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    margin: 2px auto;
+    background-color: #008000;
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+  }
+}
 a {
   text-decoration: none;
   font-size: 2em;
@@ -166,6 +179,14 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 20px 0 20px 0;
+}
+@media (max-width: 500px) {
+  header div img {
+    width: 100%;
+  }
+  header #head-h1 {
+    font-size: 1.5em;
+  }
 }
 section {
   background-color: #C0C0C0;
@@ -219,27 +240,4 @@ form {
 .flex-center {
   display: flex;
   justify-content: center;
-}
-@media (max-width: 500px) {
-  header div img {
-    width: 100%;
-  }
-  header #head-h1 {
-    font-size: 1.5em;
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-  }
-  nav a {
-    margin: 2px auto;
-    background-color: #008000;
-    width: 100%;
-    padding: 1%;
-    text-align: center;
-  }
-  #aTags a {
-    display: flex;
-    flex-direction: column;
-  }
 }
