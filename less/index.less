@@ -57,55 +57,108 @@ html, body {
     height: 100%;
 }
 
+@fontSizing: 2em;
+@green: #008000;
+@silver: #C0C0C0;
+@gold: gold;
+@black: black;
+@red: red;
+
 body {
-	display: flex;
-	justify-content: center;
-	padding: ;
+	
 }
 
 #container {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-
 	width: 80%;
-	height: 100%;
-	border: 3px solid gold;
+	height: auto;
+	background-color: @gold;
 	padding: 2%;
-	margin-top: 1%;
-	margin-bottom: 5%;
+	margin: 0 auto;
 
-	h2 {
-		font-size: 2em;
+	h1 {
+		font-size: @fontSizing;
+		padding: 1%;
+		color: @black;
+	}
+}
+
+h2 {
+	font-size: @fontSizing;
+	padding: 1%;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	text-decoration: none;
+
+	border: 2px solid brown;
+	padding: 1% 0;
+}
+
+a {
+	// display: flex;
+	text-decoration: none;
+	font-size: @fontSizing;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 20px 0 20px 0;
+}
+
+section	{
+	background-color: @silver;
+
+	border: 2px solid silver;
+	margin: 1% 0 1% 0;
+	padding: 1%;	
+	// height: 25%;
+
+	a img {
+		width: 35%;
+		border: 5px solid @green;
+		// .flex-row():
 	}
 
-	nav {
-		display: flex;
-		justify-content: space-around;
-		text-decoration: none;
+	ul {
+		margin-left: 5%;
 	}
 
-	header {
-		margin: 20px 0 20px 0;
-	}
-
-	#skills {
-		margin: 20px 0 20px 0;
-	}
-
-	#work-history {
-		margin: 20px 0 20px 0;	
-	}
-
-	img {
-		width: 25%;
-		border: 2px solid green;
-		display: none;
+	#message {
+		width: 50%;
+		height: 100px;
 	}
 
 	form {
-		// margin-bottom: 5%;
+		input {
+			margin: 5px;
+			background-color: @red;
+		}
 	}
+}
+
+#skills {
+	.flex-column();
+}
+
+#work-history {
+	.flex-column();
+	height: auto;
+
+	div {
+		.flex-row();
+
+		border: 2px solid blue;
+		padding: 1%;
+	}	
+	
+}
+
+form {
+	margin-bottom: 2%;
 }
 
 
@@ -113,15 +166,45 @@ body {
 .flex-column {
 	display: flex;
 	flex-direction: column;
-	margin: 2% 0 2% 0;
 }
 
 .flex-row {
 	display: flex;
 	flex-direction: row;
-	margin: ;
+	justify-content: center;
 }
 
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
 
+@media(max-width: 500px) {
+	header {
+		div {
+			img {
+				width: 100%;
+			}
+		}
+		#head-h1 {
+		font-size: 1.5em;
+	}
 
+	}
 
+	nav {
+		.flex-column();
+		a {
+			margin: 2px auto;
+			background-color: @green;
+			width: 100%;
+			padding: 1%;
+			text-align: center;
+		}
+	}
+
+	#aTags a {
+		display: flex;
+		flex-direction: column;
+	}	
+}
