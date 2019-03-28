@@ -3,8 +3,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-  <title>My Resume</title>
+  <title>Web Dev, Robert Kulp</title>
 
   <link rel="stylesheet" href="css/index.css">
 
@@ -14,6 +15,61 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+	<div id="container">
+		<nav>
+			<a href="">About</a>
+			<a href="">Work</a>
+			<a href="">Skills</a>
+			<a href="">Contact</a>
+		</nav>
+
+  	<header>
+  		<h1 id="head-h1">Robert Kulp's Developer Resume</h1>
+
+  		<div>
+        <img src="img/me.jpg" id="main-img">
+
+        <section id="intro">
+          <p>I believe that if something is worth doing, it is worth doing well. With this mindset I tackle problems as opportunities to grow and succeed. Solutions come to those who open their mind, collaborate and continue to move forward with intent, undaunted by challenges that may occur. This is my approach to life. </p>
+        </section>  
+      </div>
+  	</header>
+
+  	<section id="skills">
+      <h2>Skill Set</h2>
+  			<ul style="list-style-type: disc;">
+          <li>Accomplished problem solver</li>
+          <li>Love to collaborate!</li>
+          <li>Communication is a joy!</li>
+          <li>Love to learn</li>
+          <li>Full Stack developer</li>
+          <li>JavaScript master</li>
+        </ul>
+  	</section>
+
+  	<section id="work-history">
+      <h2>Some of my projects!</h2>
+      <div id="aTags">
+        <a href="http://www.rabithole.com/" target="blank"><img src="img/rabithole.png"></a>
+        <a href="http://www.ooweegooeybrownies.com/" target="blank"><img src="img/ooey-gooey.png"></a>
+        <a href="http://www.vista-park.org/" target="blank"><img src="img/vista-park.png"></a>
+        <a href="https://rabithole.github.io/portfolio-website/" target="blank"><img src="img/portfolio-lambda.png"></a>
+        <a href="https://rabithole.github.io/responsive-web-design-I/" target="blank"><img src="img/great-idea.png"></a>
+      </div>
+  	</section>
+
+  	<section id="contact">
+  		<form>
+  				<label>First Name:</label></br>
+          <input type="text" name="first-name">
+          <label>Last Name:</label></br>
+          <input type="text" name="last-name">
+          <label>Message</label></br>
+          <input type="" name="message" id="message">
+          <button>Send It</button>
+  		</form>
+  	</section>
+	</div>
+	
 </body>
 </html>
